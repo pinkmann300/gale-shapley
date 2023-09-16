@@ -44,6 +44,8 @@ for i in range(len(menList)):
     menList[i].updatePref(random.sample(womenList, len(womenList)))
     womenList[i].updatePref(random.sample(menList, len(menList)))
 
+print("Men list: ")
+print("\n")
 
 for j in range(len(menList)):
     print(menList[j].name,"-> ",end=' ') 
@@ -51,5 +53,15 @@ for j in range(len(menList)):
         print(k.name, end=",")
     print("")
 
+print("\n")
+
+print("Women list: ")
+print("\n")
+for m in range(len(womenList)):
+    print(womenList[m].name,"->", end=' ')
+    for l in (womenList[m].prefLis):
+        print(l.name, end=',')
+    print("")
 
 
+# def galeShapley(menList,womenList):
