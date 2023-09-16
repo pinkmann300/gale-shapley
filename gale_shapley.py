@@ -46,11 +46,10 @@ for i in range(len(menList)):
 
 
 for j in range(len(menList)):
-    print(menList[j].name ) 
+    print(menList[j].name,"-> ",end=' ') 
     for k in (menList[j].prefLis):
-        print(k.name)
-
-    
+        print(k.name, end=",")
+    print("")
 
 
 
