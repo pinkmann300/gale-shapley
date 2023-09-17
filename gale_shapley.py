@@ -32,14 +32,16 @@ w1 = Woman("Woman 1", [], None)
 w2 = Woman("Woman 2", [], None)
 w3 = Woman("Woman 3", [], None)
 w4 = Woman("Woman 4", [], None)
+w5 = Woman("Woman 5", [], None)
 
 m1 = Man("Man 1",[],None)
 m2 = Man("Man 2",[],None)
 m3 = Man("Man 3",[],None)
 m4 = Man("Man 4",[],None)
+m5 = Man("Man 5",[],None)
 
-womenList = [w1,w2,w3,w4]
-menList = [m1,m2,m3,m4]
+womenList = [w1,w2,w3,w4,w5]
+menList = [m1,m2,m3,m4,m5]
 
 
 stable_match = []
@@ -50,19 +52,24 @@ for i in range(len(menList)):
     womenList[i].updatePref(random.sample(menList, len(menList)))
 
 
-
+print("Men's preference list: ")
+print("\n")
 for j in range(len(menList)):
     print(menList[j].name,"-> ",end=' ') 
     for k in (menList[j].prefLis):
         print(k.name, end=",")
     print("")
 
-
+print("\n")
+print("Women's preference list: ")
+print("\n")
 for m in range(len(womenList)):
     print(womenList[m].name,"->", end=' ')
     for l in (womenList[m].prefLis):
         print(l.name, end=',')
     print("")
+
+print("\n")
 
 
 def isAllMatch(l1):
@@ -100,11 +107,11 @@ def gale_shapley(mList,wList):
     else:
         for k in mList:
             propose(k, k.prefLis[0])
-
+            
         for m in mList:
             tupel = (m.name, m.matched.name)
             stable_match.append(tupel)
 
 
 gale_shapley(menList,womenList)
-print(stable_match)
+print("Stable Matching: ", stable_match)
