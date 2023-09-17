@@ -9,7 +9,6 @@ class Man:
         self.name = name
         self.prefLis = prefLis
         self.matched = matched
-        self.prop_List = []
 
     def updatePref(self,l1):
         self.prefLis = l1
@@ -20,8 +19,7 @@ class Woman:
     def __init__(self,name,prefLis=[],matched=None):
         self.name = name 
         self.prefLis = prefLis
-        self.matched = matched 
-        self.prop_List = []
+        self.matched = matched  
 
     def updatePref(self, l2):
         self.prefLis = l2
