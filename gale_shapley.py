@@ -44,10 +44,6 @@ m5 = Man("Man 5",[],None)
 womenList = [w1,w2,w3,w4,w5]
 menList = [m1,m2,m3,m4,m5]
 
-
-stable_match = []
-
-
 for i in range(len(menList)):
     menList[i].updatePref(random.sample(womenList, len(womenList)))
     womenList[i].updatePref(random.sample(menList, len(menList)))
@@ -102,6 +98,7 @@ def propose(man1,woman1):
         
 
 def gale_shapley(mList,wList):
+    stable_match = []
     if len(mList) != len(wList):
         print("Not acceptable")
         
@@ -113,6 +110,8 @@ def gale_shapley(mList,wList):
             tupel = (m.name, m.matched.name)
             stable_match.append(tupel)
 
+    return stable_match
 
-gale_shapley(menList,womenList)
-print("Stable Matching: ", stable_match)
+
+
+print("Stable Matching: ", gale_shapley(menList,womenList))
