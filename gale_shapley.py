@@ -40,13 +40,9 @@ m1 = Man("Man 1",[],None)
 m2 = Man("Man 2",[],None)
 m3 = Man("Man 3",[],None)
 m4 = Man("Man 4",[],None)
-m5 = Man("Man 5",[],None)
-m6 = Man("Man 6", [], None)
-m7 = Man("Man 7", [], None)
-m8 = Man("Man 8", [], None)
 
 womenList = [w1,w2,w3,w4,w5]
-menList = [m1,m2,m3,m4,m5,m6,m7,m8]
+menList = [m1,m2,m3,m4]
 
 
 # Writing code to test out the single man condition and making appropriate changes to the "propose" function to handle the same.
@@ -56,6 +52,22 @@ for i in range(len(menList)):
 
 for j in range(len(womenList)):
     womenList[j].updatePref(random.sample(menList, len(menList)))
+
+
+
+def generateData(m,w):
+    menArr = []
+    womenArr = []
+    for i in range(m):
+        menstr = "Man " + str(i+1)
+        menArr.append(Man(menstr,[],None))
+    
+    for l in range(w):
+        womenstr = "Woman " + str(l+1)
+        womenArr.append(Woman(womenstr,[],None))
+
+    return [menArr, womenArr]
+
 
 
 
