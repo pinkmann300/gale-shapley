@@ -69,13 +69,6 @@ def generateData(m,w):
     return [menArr, womenArr]
 
 
-
-
-
-
-
-
-
 print("Men's preference list: ")
 print("\n")
 for l in range(len(menList)):
