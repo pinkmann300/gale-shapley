@@ -71,6 +71,11 @@ def generateData(m,w):
 
 
 
+
+
+
+
+
 print("Men's preference list: ")
 print("\n")
 for l in range(len(menList)):
@@ -142,3 +147,7 @@ def gale_shapley(mList,wList):
 
 
 print("Stable Matching: ", gale_shapley(menList,womenList))
+
+
+# Improvements : Add blocking pairs test to prove correctness and the fact that it is a stable matching. 
+#                Improve the function that generates the data for which the gale shapley algorithm is run better. 
