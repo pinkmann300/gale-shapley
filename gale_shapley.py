@@ -138,8 +138,15 @@ def gale_shapley(mList,wList):
     return stable_match
 
 
+def checkBlockingPairs(mList, wList, smatch):
+    for i in range(len(smatch)):
+    
 
-print("Stable Matching: ", gale_shapley(menList,womenList))
+
+
+
+
+#print("Stable Matching: ", gale_shapley(menList,womenList))
 
 
 # Improvements : Add blocking pairs test to prove correctness and the fact that it is a stable matching. 
