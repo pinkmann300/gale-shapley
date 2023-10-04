@@ -126,6 +126,7 @@ def propose(man1,woman1):
 
 def gale_shapley(mList,wList):
     stable_match = []
+    stable_pairs = []
     for k in mList:
         propose(k, k.prefLis[0])
             
@@ -138,8 +139,6 @@ def gale_shapley(mList,wList):
     return stable_match
 
 
-def checkBlockingPairs(mList, wList, smatch):
-    for i in range(len(smatch)):
     
 
 
